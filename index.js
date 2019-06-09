@@ -7,7 +7,9 @@ client.once('ready', () => {
 })
 
 client.on('message', async message => {
-  //console.log(message.content);
+  if(message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
+
+      //console.log(message.content);
 
   if(message.content.startsWith(`${prefix}kick`)) {
     //message.channel.send("kick")
@@ -26,6 +28,9 @@ client.on('message', async message => {
       message.channel.send(":wave: " + member.displayName + " has been yeeted out of the fucking universe and will never return!")
     })
   }
+
+  }
+  
 })
 
 client.login(token);
