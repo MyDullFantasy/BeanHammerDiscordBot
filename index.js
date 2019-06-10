@@ -3,7 +3,7 @@ const { prefix, token } = require('./config.json');
 const client = new Discord.Client();
 
 client.once('ready', () => {
-  console.log('Ready!')
+  console.log('The bot is ready and fired up for use!!')
 })
 
 client.on('message', async message => {
@@ -18,11 +18,14 @@ client.on('message', async message => {
     if(message.content.startsWith(`${prefix}help`))
       message.channel.send('This is currently being worked on at this very moment.');
 
-   if(message.content.startsWith(`${prefix}invitebot`))
+    if(message.content.startsWith(`${prefix}invitebot`))
       message.channel.send('You can invite me to other servers using this link: https://bit.ly/2I81tBL');
     
     if(message.content.startsWith(`${prefix}github`))
       message.channel.send('This is the github repo: https://github.com/Spyrincho/BeanHammerDiscordBot ');
+      
+    if(message.content.startsWith(`${prefix}say`))
+      message.channel.send('This is currently being worked on at this very moment.');
     
   }
 
