@@ -25,7 +25,7 @@ client.on('message', async message => {
       message.channel.send('This is the github repo: https://github.com/Spyrincho/BeanHammerDiscordBot ');
       
     if(message.content.startsWith(`${prefix}say`))
-      message.channel.send('This is currently being worked on at this very moment.');
+      message.channel.sendMessage(`<@`+message.author.id+`>` + " said: " + '"' + message.content.replace(`${[prefix]}say`,'').trim() + '"');
     
   }
 
